@@ -1,6 +1,8 @@
 /*importaciones*/
+import { useCart } from "../hooks/useCart.js"
 
 function Producto({info}) {
+  const { addToCart } = useCart();
 
   return (
     <div className="producto">
@@ -8,7 +10,7 @@ function Producto({info}) {
         <div className="info">
             <span>{info?.title}</span>
             <p>{info?.description}</p>
-                <button>$ {info?.price}</button>
+                <button onClick={() => addToCart(info)}>$ {info?.price}</button>
         </div>
     </div>
   )

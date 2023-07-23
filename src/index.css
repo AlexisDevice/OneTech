@@ -10,6 +10,7 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
+  min-height: 100vh;
   background-color: #432818;
 }
 
@@ -47,20 +48,26 @@
   border-radius: 16px;
 }
 
-.header>img {
+.header>a>img {
   cursor: pointer;
   height: 20px;
-  padding: 10px;
 }
 
-.header>img:hover {
-  background-color: #bb9457;
-  border-radius: 50%;
+.header>a:hover>img {
+  height: 30px;
 }
 
 /* Catalogo */
 
 .catalogo {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: auto;
+  gap: 15px;
+  width: 90%;
+}
+
+.carrito {
   margin-top: 50px;
   display: grid;
   grid-template-columns: auto;

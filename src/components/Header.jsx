@@ -27,7 +27,7 @@ function Header() {
             <Categories Category={val} key={index} />
         ))}
       </div>
-      <img src={tienda} alt="Tienda" />
+      <Link to={'/cart'}><img src={tienda} alt="Tienda" /></Link>
     </div>
   )
 }
