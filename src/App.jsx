@@ -1,8 +1,7 @@
 import Header from "./components/header"
-import Catalogo from "./components/Catalogo"
-import { Route, Routes } from "react-router-dom"
+import Router from "./services/Router"
 import { CartProvider } from "./context/cart"
-import Carrito from './components/Carrito'
+
 
 
 function App() {
@@ -10,11 +9,7 @@ function App() {
     <div className="container">
       <Header />
       <CartProvider>
-        <Routes>
-          <Route path="/" element={<Catalogo />} />
-          <Route path="/categoria/:name" element={<Catalogo />} />
-          <Route path="/cart" element={<Carrito />} />
-        </Routes>
+        <Router />
       </CartProvider>
     </div>
   )
